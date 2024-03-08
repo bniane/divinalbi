@@ -1,0 +1,7 @@
+database:
+  uri: "mysql+pymysql://appusers:Bigueniane2!@localhost/root"
+secret_key: "bibi"
+mysql_host: "localhost"
+mysql_user: "root"
+mysql_password: "Bigueniane2!"
+mysql_db: "appusers"

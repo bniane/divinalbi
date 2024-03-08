@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>success three</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+        }
+        h1 {
+            color: #000;
+            text-align: center;
+            margin: 20px 0;
+        }
+        p {
+            color: #000;
+            text-align: center;
+            margin: 10px 0;
+        }
+        a {
+            display: inline-block;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        a:hover, a:focus {
+            background-color: #333333; /* Gris foncé */
+        }
+        .hint {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color:  #f0f0f0; 
+        }
+        img.logo {
+            width: 60%; 
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <img src="/static/logo_conf.png" alt="Logo" class="logo">
+    <h1>Tu es à l'ultime étape champion.ne !</h1>
+    <p class="centered-text">Envoie par message et au plus vite, ton code au chéri de juliette</p>
+    <p>07 68 28 96 34</p>
+    <!-- Afficher le code généré -->
+    <p><span id="uniqueCode" style="font-size: 10px;">{{ code }}</span></p>
+
+    <br>
+    <a href="/">Retour à l'accueil</a>
+</body>
+</html>

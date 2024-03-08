@@ -1,0 +1,167 @@
+<!--<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étape 2</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        input[type=text] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type=submit] {
+            background-color: #000;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .footer {
+            position: fixed;
+            left: 10px;
+            bottom: 10px;
+            text-align: center;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #000;
+            background-color: #f0f0f0;
+            padding: 5px;
+            border-radius: 50%;
+        }
+        img.logo {
+            width: 50%; /* Réduction de la taille du logo */
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="/static/logo_bande.png" alt="Logo" class="logo">
+    <h1>Bienvenue à l'Étape 2</h1>
+    <p>T'as réussi à déchiffrer le message de la première étape?</p>
+    <form action="/step_two" method="post">
+        <input type="text" name="user_code" placeholder="Entrez votre code" required>
+        <button type="submit">Envoyer</button>
+    </form>
+    <div class="footer">
+        <a href="/indice2">°</a>
+    </div>    
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étape 2</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        input[type=text] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type=submit] {
+            background-color: #000;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .footer {
+            position: fixed;
+            left: 10px;
+            bottom: 10px;
+            text-align: center;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #000;
+            background-color: #f0f0f0;
+            padding: 5px;
+            border-radius: 50%;
+            display: none; 
+        }
+        img.logo {
+            width: 50%;
+            height: auto;
+            margin-top: 20px;
+            cursor: pointer; /* Ajoute un indicateur visuel que le logo est cliquable */
+        }
+    </style>
+</head>
+<body>
+    <img src="/static/logo_bande.png" alt="Logo" class="logo" id="logo">
+    <h1 id="title">Étape 1'27''</h1>
+    <p>T'as réussi à déchiffrer le message de la première étape ?</p>
+    <form action="/step_two" method="post">
+        <input type="text" name="user_code" placeholder="Entrez votre code" required>
+        <button type="submit">Envoyer</button>
+    </form>
+    <div class="footer">
+        <a href="/indice2">°</a>
+    </div>
+    <script>
+        let logo = document.getElementById('logo');
+        // let title = document.getElementById('title');
+        let link = document.querySelector('.footer a');
+        let logoClicks = 0;
+
+        logo.addEventListener('click', function() {
+            logoClicks++;
+            if (logoClicks >= 3) { // L'indice apparaît après 3 clics sur le logo
+                link.style.display = 'inline';
+            }
+        });
+
+        // title.addEventListener('mouseover', function() {
+        //     setTimeout(function() {
+        //         // L'indice apparaît aussi après 2 secondes de survol sur le titre
+        //         link.style.display = 'inline';
+        //     }, 10000);
+        // });
+    </script>    
+</body>
+</html>

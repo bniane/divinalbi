@@ -1,0 +1,160 @@
+<!--<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="indice" content="Ce soir, regardez sous la lune rouge.">
+    <title>Bien joué mon con!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333; /* Couleur du texte */
+            text-align: center; /* Centrer le contenu */
+            margin: 0;
+            padding: 0;
+            position: relative;
+            min-height: 100vh;
+        }
+        a {
+            display: inline-block;
+            background-color: #000000; /* Noir */
+            color: white; /* Texte blanc */
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        a:hover, a:focus {
+            background-color: #333333; /* Gris foncé */
+        }
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            color: #eae8e8; /* Légèrement plus foncé que le fond */
+            padding: 10px 0;
+        }       
+        .footer a {
+            text-decoration: none;
+            color: #000;
+            background-color: #f0f0f0;
+            padding: 5px;
+            border-radius: 50%;
+        }
+        img.logo {
+            width: 50%; /* Réduction de la taille du logo */
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="/static/logo_bande.png" alt="Logo" class="logo">
+    <h1>Pour cette étape tu vas devoir quitter cet écran et partir à l'aventure</h1>
+    <p>Il se peut qu'avec l'étape précédente et tous les indices cumulés, tu as déjà compris ce qu'il te fallait faire </p>
+    <p>Alors si tu es convaincu d'avoir ce qu'il faut pour poursuivre:</p>
+    <p>Je te laisse passer à la suite</p>
+    <a href="/">Retour à l'accueil</a> | <a href="/step_five">étape suivante</a> 
+
+    <footer>
+        <p>Ce soir c'est la meuh >>> toc toc toc</p>
+    </footer>
+    <div class="footer">
+        <a href="/indice4">.</a>
+    </div> 
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="indice" content="Ce soir, regardez sous la lune rouge.">
+    <title>Bien joué mon con!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333; /* Couleur du texte */
+            text-align: center; /* Centrer le contenu */
+            margin: 0;
+            padding: 0;
+            position: relative;
+            min-height: 100vh;
+        }
+        a {
+            display: inline-block;
+            background-color: #000000; /* Noir */
+            color: white; /* Texte blanc */
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        a:hover, a:focus {
+            background-color: #333333; /* Gris foncé */
+        }
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            color: #efefef; /* Légèrement plus foncé que le fond */
+            padding: 10px 0;
+        }       
+        .footer a {
+            text-decoration: none;
+            color: #000;
+            background-color: #f0f0f0;
+            padding: 5px;
+            border-radius: 50%;
+        }
+        img.logo {
+            width: 50%; /* Réduction de la taille du logo */
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="/static/logo_bande.png" alt="Logo" class="logo">
+    <h1>Rien à voir avec la chasse aux trésors mais t'en a pensé quoi du allo'pécie ?</h1>
+    <p>Et c'est gamin d'appeler à 3h du mat</p>
+    <p>Non en vrai fais toi plaisir, des dieux ça dort pas !</p>
+    <p>Bref, on te laisse passer à la suite</p>
+    <a href="/">Retour à l'accueil</a> | <a href="/success_five">étape suivante</a> 
+
+    <footer>
+        <p>Tu penses avoir trouver tous les indices du site ? y'en a qui sont bien cachés...</p>
+    </footer>
+    <div class="footer">
+        <a href="/indice5">-</a>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        let state = 0;
+        const link = document.querySelector('.footer a');
+        const logo = document.querySelector('.logo');
+        // const title = document.querySelector('h1');
+        const firstParagraph = document.querySelectorAll('p')[0];
+
+        // Masquer initialement l'indice
+        link.style.display = 'none';
+
+        // title.addEventListener('click', () => {
+        //     if (state === 0) state = 1;
+        // });
+
+        firstParagraph.addEventListener('click', () => {
+            if (state === 0) state = 1;
+        });
+
+        logo.addEventListener('click', () => {
+            if (state === 1) {
+                link.style.display = 'inline'; // Affiche l'indice
+                state = 0; // Réinitialiser l'état pour pouvoir recommencer le processus si nécessaire
+            }
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étape 1</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        input[type=text] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type=submit] {
+            background-color: #000;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .footer {
+            position: fixed;
+            left: 10px;
+            bottom: 10px;
+            text-align: center;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #000;
+            background-color: #f0f0f0;
+            padding: 5px;
+            border-radius: 50%;
+            display: none; 
+        }
+        img.logo {
+            width: 50%; 
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="/static/logo_bande.png" alt="Logo" class="logo">
+    <h1 id="welcome-title">Étape 1 : Culture Générale</h1>
+    <p>⌊Date de construction du chemin de fer à albi - (âge école * n° diable)/100⌋</p>
+    <form action="/step_one" method="post">
+        <input type="text" name="user_code" placeholder="Entrez votre code" required>
+        <button type="submit">Envoyer</button>
+    </form>
+    <div class="footer">
+        <a href="/indice1">?</a>
+    </div>
+    <script>
+        window.onload = function() {
+            document.getElementById('welcome-title').addEventListener('dblclick', function() {
+                var link = document.querySelector('.footer a');
+                if (link.style.display === 'none' || link.style.display === '') {
+                    link.style.display = 'inline';
+                } else {
+                    link.style.display = 'none';
+                }
+            });
+        };
+    </script>    
+</body>
+</html>

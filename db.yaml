@@ -1,0 +1,13 @@
+mysql_host: 'localhost'
+mysql_user: 'root'
+mysql_password: 'Bigueniane2!'
+mysql_db: 'appusers'
+
+
+# "pour la bd:
+# mysql -u root -p
+# mdp:
+# show database (pour voir la base)
+# use appusers (pout se mettre dans la bonne bd)
+# show tables (pour voir la table qui nous intéresse)
+# select * from table qu'on veut voir"

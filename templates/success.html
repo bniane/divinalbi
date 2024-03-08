@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étape 5</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        input[type=text] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type=submit] {
+            background-color: #000;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .footer {
+            position: fixed;
+            left: 10px;
+            bottom: 10px;
+            text-align: center;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #000;
+            background-color: #f0f0f0;
+            padding: 5px;
+            border-radius: 50%; 
+        }
+        img.logo {
+            width: 50%; 
+            height: auto;
+            margin-top: 20px;
+        }
+        .hint {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color:  #f0f0f0; 
+        }
+    </style>
+</head>
+<body>
+    <img src="/static/logo_bande.png" alt="Logo" class="logo">
+    <h1>Étape 5 : Petit TAPE des familles</h1>
+    <p>Il était une fois un demi-dieu émacien à la recherche du saint graal.</p>
+    <p>Ne vous trompez pas, ce texte ne sert à rien, vous perdez votre temps.</p>
+    <p>Donc tu veux vraiment tout lire là ? bon dans ce cas je vais dire de la merde hein!</p>
+    <p>Inévitablement, comme tu lis tout je vais dire de la merde.</p>
+    <p>Comme vous l'imaginez, rien ne sert de compter les tétons même s'ils y sont nombreux.</p> 
+    <p>Enfin, penchez vous sur les moindres détails, le trésor en vaut la peine. </p>
+        
+    <p> a. ce soir pas de TAPEEEEEE</p>
+    <p>b. Divin’Albi Meilleure Liste !!!!!</p>   
+    <p>c. N'empêche, seule liste à t’offrir le loyer</p>    
+    <p>d. le courant 2</p>    
+    <p>e. la réponse e</p>    
+        
+    <br>
+    <p class="hint">07 68 28 96 34</p>
+
+    <form action="/step_five" method="post">
+        <input type="text" name="user_code" placeholder="Entrez votre code" required>
+        <button type="submit">Envoyer</button>
+    </form>
+    <div class="footer">
+        <a href="/indice5">,</a>
+    </div>    
+</body>
+</html>

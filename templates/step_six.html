@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étape 5</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        input[type=text] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type=submit] {
+            background-color: #000;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        a {
+            display: inline-block;
+            background-color: #000000; /* Noir */
+            color: white; /* Texte blanc */
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        a:hover, a:focus {
+            background-color: #333333; /* Gris foncé */
+        }
+        footer {
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+            color: #e9e8e8; /* Légèrement plus foncé que le fond */
+            padding: 10px 0;
+            background-color: #f0f0f0; 
+
+        }       
+        .footer a {
+            text-decoration: none;
+            color: #000;
+            background-color: #f0f0f0;
+            padding: 5px;
+            border-radius: 50%;
+            display: none; 
+        }
+        img.logo {
+            width: 50%; /* Réduction de la taille du logo */
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="/static/logo_bande.png" alt="Logo" class="logo">
+    <h1 id="title">Étape 6 ouuuu ?</h1>
+    <p>Tia le code mon gaté ?</p>
+    <form action="/step_six" method="post">
+        <input type="text" name="user_code" placeholder="Entrez votre code" required>
+        <button type="submit">Envoyer</button>
+    </form>
+    <div class="footer">
+        <a href="/indice4">.</a>
+    </div>  
+    <script>
+        let title = document.getElementById('title');
+        let link = document.querySelector('.footer a');
+        let logoClicks = 0;
+
+        title.addEventListener('mouseover', function() {
+            setTimeout(function() {
+                link.style.display = 'inline';
+            }, 5000);
+        });
+    </script>   
+    
+</body>
+</html>

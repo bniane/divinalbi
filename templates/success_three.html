@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>success three</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+        }
+        .code {
+            padding: 15px; /*taille */
+            background-color: #ffffff; /*couleur */
+            border-left: 5px solid #000; /*couleur des bords */
+            font-style: italic; /*type police */
+            width: 100%; /*taille de l'écriture */
+            max-width: 500px;  /* door’ebuqwlkh */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /*couleur et taille */
+            margin: 20px 0; /*taille marge */
+            text-align: center; /*position */
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        label, input, button {
+            display: block;
+            width: calc(100% - 20px);
+            margin: 10px auto;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #000;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #333;
+        }
+        .image-bas-droite {
+            position: absolute;
+            bottom: 1px; /* Distance du bas */
+            right: 10px; /* Distance de la droite */
+            width: 5px; /* Ajustez selon la taille souhaitée */
+            height: auto;
+        }
+        img.logo {
+            width: 50%; /* taille du logo */
+            height: auto;
+            margin-top: 20px;
+        }
+        h1 {
+            color: #000;
+            text-align: center;
+            margin: 20px 0;
+        }
+        p {
+            color: #000;
+            text-align: center;
+            margin: 10px 0;
+        }
+        a {
+            display: inline-block;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        a:hover, a:focus {
+            background-color: #333333; /* Gris foncé */
+        }
+        .hint {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color:  #f0f0f0; 
+        }
+    </style>
+</head>
+<body>
+    <img src="/static/logo_bande.png" alt="Logo" class="logo">
+    <h1>Même principe que l'étape 2</h1>
+    <div class="code">C'est parfois au plus bas que tu peux trouver ton bonheur</div>
+    <form action="/success_three" method="POST"> 
+        <label for="meaning">Dis moi tout !</label>
+        <input type="text" id="meaning" name="meaning" required>
+        <button type="submit">Soumettre</button>
+    </form> 
+        
+    <p class="hint">07 68 28 96 34</p>
+
+</body>
+</html>
